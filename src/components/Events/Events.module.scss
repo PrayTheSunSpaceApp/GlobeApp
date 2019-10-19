@@ -1,10 +1,14 @@
 @import "../shared/styles/colors.scss";
 
 .listLayout {
-  background: white;
+  background: #222222;
   padding: 20px 40px;
   max-width: 600px;
   border-radius: 5px;
+}
+
+.tableLables{
+  color: mintcream!important;
 }
 
 .eventsContainer {
@@ -32,8 +36,15 @@
   & > h1 {
     margin: 0;
     font-size: 1.4rem;
-    color: $black200;
+    color: mintcream!important;
   }
+}
+
+.tableImput {
+  border-radius: 4px;
+  border: 1px solid;
+  background-color: #444444;
+  padding-left: 5px;
 }
 
 .searchEvents {

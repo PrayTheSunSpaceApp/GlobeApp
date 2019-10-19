@@ -18,7 +18,7 @@ export const SearchEvents = props => {
   return (
     <div className={styles.searchEvents}>
       <input
-        class="form-control"
+        className={styles.tableImput}
         type="text"
         placeholder="Search"
         aria-label="Search"
@@ -37,18 +37,18 @@ export const List = ({ data }) => {
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Members</th>
-            <th scope="col">Action</th>
+            <th className={styles.tableLables} scope="col">Title</th>
+            <th className={styles.tableLables} scope="col">Members</th>
+            <th className={styles.tableLables} scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           {data.map(el => {
             return (
               <tr>
-                <td>{el.title}</td>
-                <td>{el.count}</td>
-                <td>
+                <td className={styles.tableLables}>{el.title}</td>
+                <td className={styles.tableLables}>{el.count}</td>
+                <td className={styles.tableLables}>
                   <button type="button" class="btn btn-dark">
                     {el.isInvited ? "Leave" : "Join"}
                   </button>
