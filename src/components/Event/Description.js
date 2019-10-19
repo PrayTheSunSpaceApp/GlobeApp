@@ -4,7 +4,8 @@ import styles from './Event.module.scss';
 const Description = ({}) => {
     return (
         <div className={styles.descriptionContainer}>
-            <p>Description important info</p>
+            <h2>Description:</h2>
+            <p>Here you can store every important information. Links, addition info, sponsors links and other</p>
         </div>
     );
 }

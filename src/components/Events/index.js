@@ -67,7 +67,8 @@ class Events extends React.Component {
               label: event.title,
               lt: event.location.lt,
               lg: event.location.lg,
-              alt: 100
+              alt: 100,
+              markerType: 'events'
             }))}
           />
         </div>
