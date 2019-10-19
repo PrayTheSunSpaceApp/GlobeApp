@@ -1,6 +1,11 @@
 .pageLayout {
     min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
 }
 .mainLayout{
     min-height: 300px;
+    max-width: 1400px;
+    margin: auto;
+    flex-grow: 1;
 }

@@ -1,0 +1,50 @@
+@import "../shared/styles/colors.scss";
+
+.homeContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.first,
+.second {
+  background: $black200;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  display: flex;
+  min-height: 400px;
+  justify-content: flex-end;
+  margin: 40px;
+  width: 100%;
+}
+
+.first {
+  background-image: url("./assets/1.jpg");
+}
+
+.second {
+  background-image: url("./assets/2.jpg");
+}
+
+.firstTitle,
+.secondTitle {
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+  padding: 20px;
+  color: $gray100;
+}
+
+.firstTitle {
+  margin-right: 60%;
+}
+
+.secondTitle {
+  margin-left: 60%;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
