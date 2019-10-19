@@ -2,3 +2,6 @@
 package-lock.json
 # build folder
 /dist
+
+yarn.lock
+yarn-error.log

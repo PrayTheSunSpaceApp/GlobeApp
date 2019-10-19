@@ -1,0 +1,51 @@
+@import "../../styles/colors.scss";
+
+.container {
+    margin: auto;
+    padding: 20px 40px;
+    background: white;
+    min-width: 300px;
+    display: flex;
+    border-radius: 5px;
+    flex-flow: column nowrap;
+}
+
+.title {
+    margin: 5px 0px 10px 0;
+    font-size: 2rem;
+}
+
+.fieldContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+.fieldLabel {
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+.field {
+    background: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 5px 15px;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+.submit {
+    cursor: pointer;
+    border: none;
+    background: $black400;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding: 10px;
+    color: $gray100;
+    margin-top: 10px;
+    transition: background-color .3s ease-out;
+}
+
+.submit:hover {
+    background: $black200;
+}

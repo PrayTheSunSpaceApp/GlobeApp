@@ -1,0 +1,114 @@
+@import "../shared/styles/colors.scss";
+
+.eventContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.leftSide {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.rightSide {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.chatContainer {
+  color: white;
+  margin: 20px;
+  padding: 20px 40px;
+  background: $black200;
+  border-radius: 5px;
+  max-width: 400px;
+}
+
+.chatSendContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.chatTitle {
+    font-size: 1.4rem;
+}
+
+.chatScreen {
+  background: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  color: $black200;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+.messageContainer {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 5px;
+}
+.messageContainer span {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.messageContainer img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.messageContainer p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.globeContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px 40px;
+  background: $black200;
+  border-radius: 5px;
+}
+
+.descriptionContainer {
+  color: white;
+  margin: 20px;
+  padding: 20px 40px;
+  background: $black200;
+  border-radius: 5px;
+}
+
+.globeTitle, .shareTitle {
+  color:whitesmoke;
+  font-size: 1.6rem;
+}
+
+.shareContainer {
+  padding: 20px;
+  margin: 20px;
+  background: $black200;
+  color: whitesmoke;
+}
+
+.socialContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shareIcon > img {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+}
