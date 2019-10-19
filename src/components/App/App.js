@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
 import { connect } from "react-redux";
-
+import { Router, Switch, Route } from "react-router-dom";
 import style from "./App.scss";
+import Layout from "./Layout";
 
 /* connect need to connect component to redux store */
 
@@ -13,14 +14,32 @@ class App extends Component {
   }
 
   render() {
-    return <div className={`${style.title}`}>This is Empty React/Redux App</div>;
+    return (
+      <Router history={this.props.history}>
+        <Layout>
+        Home
+        {/* <Router>
+          <Switch>
+            <Route path="/" render={() => "Home"} />
+            <Route path="/events" render={() => "Events"} />
+            <Route path="/profile" render={() => "Profile"} />
+            <Route path="/signin" render={() => "Sign in"} />
+            <Route path="/signup" render={() => "Sign up"} />
+            <Route path="**" render={() => "404 NotFound"} />
+          </Switch>
+        </Router> */}
+      </Layout>
+      </Router>
+    );
   }
 }
 
 /* propTypes need to validate props types */
 App.propTypes = {};
 /* Map data from redux store to component props */
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  history: state.historyData.history
+});
 
 /* Map actions from redux to component props */
 const mapDispatchtoProps = dispatch => ({});
