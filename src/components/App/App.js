@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Router, Switch, Route } from "react-router-dom";
 import style from "./App.scss";
 import Layout from "./Layout";
+import SignIn from '../SignIn';
 
 /* connect need to connect component to redux store */
 
@@ -17,17 +18,14 @@ class App extends Component {
     return (
       <Router history={this.props.history}>
         <Layout>
-        Home
-        {/* <Router>
           <Switch>
-            <Route path="/" render={() => "Home"} />
-            <Route path="/events" render={() => "Events"} />
-            <Route path="/profile" render={() => "Profile"} />
-            <Route path="/signin" render={() => "Sign in"} />
-            <Route path="/signup" render={() => "Sign up"} />
+            <Route exact path="/" render={() => "Home"} />
+            <Route exact path="/events" render={() => "Events"} />
+            <Route exact path="/profile" render={() => "Profile"} />
+            <Route exact path="/signin" component={SignIn} />
+            <Route exact path="/signup" render={() => "Sign up"} />
             <Route path="**" render={() => "404 NotFound"} />
           </Switch>
-        </Router> */}
       </Layout>
       </Router>
     );

@@ -1,0 +1,32 @@
+@import "../shared/styles/colors.scss";
+
+.signinContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.googlesignin {
+    font-size: 1.2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-items: center;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+
+.googlesignin:hover {
+    background: $gray100;
+}
+
+.googleimg {
+    width: 40px;
+    margin-right: 40px;
+    object-fit: cover;
+}
+
+.googleimg > img {
+    width: 100%;
+}
