@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import Header from "../Header/header.js"
 
 import style from "./dashboard.scss";
 
@@ -12,7 +13,7 @@ class Dashboard extends Component {
   
     render() {
       return <div className={`${style.globalCont}`}>
-          <div className={`${style.header}`}>header</div>
+          <Header />
           <div className={`${style.body}`}>body</div>
           <div className={`${style.footer}`}>footer</div>
       </div>;
