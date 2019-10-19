@@ -1,0 +1,57 @@
+@import "../shared/styles/colors.scss";
+
+.listLayout {
+  background: white;
+  padding: 20px 40px;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.eventsContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.listContainer {
+  flex-grow: 1;
+  margin: 20px 40px;
+}
+
+.globeContainer {
+  flex-grow: 1;
+  margin: 20px 40px;
+}
+
+.listTitle {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-self: center;
+  & > h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: $black200;
+  }
+}
+
+.searchEvents {
+  margin-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.searchEvents > button {
+  margin-left: 5px;
+  padding: 5px 20px;
+}
+
+.eventTitle {
+    flex-grow: 1;
+}
+
+.paginationContainer {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: center;
+}

@@ -5,6 +5,7 @@ import { Router, Switch, Route } from "react-router-dom";
 import style from "./App.scss";
 import Layout from "./Layout";
 import SignIn from '../SignIn';
+import Events from '../Events';
 
 /* connect need to connect component to redux store */
 
@@ -20,7 +21,7 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route exact path="/" render={() => "Home"} />
-            <Route exact path="/events" render={() => "Events"} />
+            <Route exact path="/events" component={Events} />
             <Route exact path="/profile" render={() => "Profile"} />
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/signup" render={() => "Sign up"} />
