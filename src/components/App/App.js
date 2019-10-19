@@ -7,7 +7,7 @@ import Layout from "./Layout";
 import SignIn from '../SignIn';
 import Events from '../Events';
 import Event from '../Event';
-
+import Home from '../Home';
 /* connect need to connect component to redux store */
 
 /* Create Statelfull component */
@@ -21,7 +21,7 @@ class App extends Component {
       <Router history={this.props.history}>
         <Layout>
           <Switch>
-            <Route exact path="/" render={() => "Home"} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/events" component={Events} />
             <Route exact path="/event/:id" component={Event} />
             <Route exact path="/profile" render={() => "Profile"} />
