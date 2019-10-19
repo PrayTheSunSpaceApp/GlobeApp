@@ -72,6 +72,7 @@
 
 .globeContainer {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   margin: 20px;
@@ -86,4 +87,28 @@
   padding: 20px 40px;
   background: $black200;
   border-radius: 5px;
+}
+
+.globeTitle, .shareTitle {
+  color:whitesmoke;
+  font-size: 1.6rem;
+}
+
+.shareContainer {
+  padding: 20px;
+  margin: 20px;
+  background: $black200;
+  color: whitesmoke;
+}
+
+.socialContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shareIcon > img {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
 }

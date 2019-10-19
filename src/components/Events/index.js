@@ -61,6 +61,7 @@ class Events extends React.Component {
           </ListLayout>
         </div>
         <div className={styles.globeContainer}>
+          <h1 className={styles.globeTitle}>World:</h1>
           <GlobeContainer
             marksList={mockEventData.map(event => ({
               label: event.title,
