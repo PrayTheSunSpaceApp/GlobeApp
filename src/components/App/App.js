@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import Dashboard from '../Dashboard/dashboard.js'
 
 import style from "./App.scss";
 
@@ -13,7 +14,7 @@ class App extends Component {
   }
 
   render() {
-    return <div className={`${style.title}`}>This is Empty React/Redux App</div>;
+    return <div className={`${style.title}`}><Dashboard /></div>;
   }
 }
 
