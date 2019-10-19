@@ -24,6 +24,9 @@
 .globeContainer {
   flex-grow: 1;
   margin: 20px 40px;
+  padding: 20px;
+  background: $black200;
+  border-radius: 5px;
 }
 
 .listTitle {
@@ -44,6 +47,7 @@
   border-radius: 4px;
   border: 1px solid;
   background-color: #444444;
+  color: white;
   padding-left: 5px;
 }
 
@@ -65,4 +69,9 @@
     justify-self: flex-end;
     display: flex;
     justify-content: center;
+}
+
+.globeTitle {
+  color: whitesmoke;
+  font-size: 1.6rem;
 }

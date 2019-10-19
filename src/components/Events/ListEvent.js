@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Events.module.scss";
+import { Link } from 'react-router-dom';
 
 export const ListLayout = ({ children }) => {
   return <div className={styles.listLayout}>{children}</div>;
@@ -46,7 +47,7 @@ export const List = ({ data }) => {
           {data.map(el => {
             return (
               <tr>
-                <td className={styles.tableLables}>{el.title}</td>
+                <td className={styles.tableLables}><Link to='/event/1'>{el.title}</Link></td>
                 <td className={styles.tableLables}>{el.count}</td>
                 <td className={styles.tableLables}>
                   <button type="button" class="btn btn-dark">
