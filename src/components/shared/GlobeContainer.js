@@ -1,17 +1,18 @@
 import React from 'react';
-import Globe from 'worldwind-react-globe';
+import Globe from './Globe';
 import style from './style.scss';
 import 'worldwindjs'; // WorldWind
 import markerIcon from '../../../assets/icons8-marker-48.png'
 
 const createLayer = () => {
     const placemarkLayer = new WorldWind.RenderableLayer("Placemark");
+    console.log(WorldWind);
     //placemarkLayer.addRenderable(placemark);
     return placemarkLayer;
 }
 
 const createPlacemark = ({label, lt, lg ,alt}) => {
-    var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+    const placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
 
     placemarkAttributes.imageOffset = new WorldWind.Offset(
         WorldWind.OFFSET_FRACTION, 0.3,
@@ -24,14 +25,21 @@ const createPlacemark = ({label, lt, lg ,alt}) => {
 
     placemarkAttributes.imageSource = markerIcon;
     
-    var position = new WorldWind.Position(lt, lg, alt);
-    var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+    const position = new WorldWind.Position(lt, lg, alt);
+    const placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
     
     placemark.label = `
         ${label}\n
         Lat ${placemark.position.latitude.toPrecision(4).toString()}, Lon ${placemark.position.longitude.toPrecision(5).toString()}
     `;
     placemark.alwaysOnTop = true;    
+    console.log(placemark)
+    var clickRecognizer = new WorldWind.ClickRecognizer(placemark, 
+        function(recognizer) {
+            
+    });
+    console.log(clickRecognizer)
+
     return placemark;
 }
 
@@ -56,7 +64,7 @@ export default class ClobeContainer extends React.Component{
         this.state.marksList.forEach((mark, index) => {
             customLayer.addRenderable(createPlacemark(mark))
         })
-
+        console.log(customLayer)
         const layers = [
           'coordinates',
           'view-controls',
@@ -74,6 +82,7 @@ export default class ClobeContainer extends React.Component{
               latitude={34.2}
               longitude={-119.2}
               altitude={10e6} 
+              backgroundColor={'black'}
             />
           </div>
         )
