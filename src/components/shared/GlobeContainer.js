@@ -2,15 +2,15 @@ import React from 'react';
 import Globe from 'worldwind-react-globe';
 import style from './style.scss';
 import 'worldwindjs'; // WorldWind
+import markerIcon from '../../../assets/icons8-marker-48.png'
 
 const createLayer = () => {
     const placemarkLayer = new WorldWind.RenderableLayer("Placemark");
     //placemarkLayer.addRenderable(placemark);
-
     return placemarkLayer;
 }
 
-const createPlacemark = (lg) => {
+const createPlacemark = ({label, lt, lg ,alt}) => {
     var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
 
     placemarkAttributes.imageOffset = new WorldWind.Offset(
@@ -22,32 +22,42 @@ const createPlacemark = (lg) => {
                 WorldWind.OFFSET_FRACTION, 0.5,
                 WorldWind.OFFSET_FRACTION, 1.0);
 
-    placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
+    placemarkAttributes.imageSource = markerIcon;
     
-    var position = new WorldWind.Position(lg, -106.0, 100.0);
+    var position = new WorldWind.Position(lt, lg, alt);
     var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
     
-    placemark.label = "Placemark\n" +
-    "Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
-    "Lon " + placemark.position.longitude.toPrecision(5).toString();
-    placemark.alwaysOnTop = true;
-    
+    placemark.label = `
+        ${label}\n
+        Lat ${placemark.position.latitude.toPrecision(4).toString()}, Lon ${placemark.position.longitude.toPrecision(5).toString()}
+    `;
+    placemark.alwaysOnTop = true;    
     return placemark;
 }
 
+const mock = [
+    { label: 'label1', lt: 55, lg: -106, alt: 100},
+    { label: 'label2', lt: 15, lg: -106, alt: 100},
+    { label: 'label3', lt: 25, lg: -106, alt: 100},
+    { label: 'label4', lt: 75, lg: -106, alt: 100},
+]
 
 export default class ClobeContainer extends React.Component{
     constructor(props){
         super(props)
+        console.log(this.props.marksList)
+        this.state = {
+            marksList: this.props.marksList || mock
+        }
     }
 
     render() {
         const customLayer = createLayer()
-        customLayer.addRenderable(createPlacemark(55))
-        customLayer.addRenderable(createPlacemark(40))
+        this.state.marksList.forEach((mark, index) => {
+            customLayer.addRenderable(createPlacemark(mark))
+        })
 
         const layers = [
-          'eox-sentinal2-labels',
           'coordinates',
           'view-controls',
           'stars',
