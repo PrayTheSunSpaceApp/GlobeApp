@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: darkslateblue;
+    height: 150px;
+}
+.headerTextSpan {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.headerText {
+    padding: 0;
+    margin: 0;
+}
+.brandContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 15px 10px 15px 40px;
+}
+.headerNavGroup {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-size: 22px;
+}
+.headerImg{
+    height: 100px;
+    width: auto;
+    margin: 10px;
+}
+.headerNav {
+    padding: 0 30px;
+    text-decoration: none;
+    color: mintcream;
+}
+.headerLogin {
+    padding: 0 30px;
+    margin-left: 650px;
+    text-decoration: none;
+    color: mintcream;
+}
