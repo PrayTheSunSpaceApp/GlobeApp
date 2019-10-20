@@ -23,7 +23,7 @@ class Profile extends React.Component {
             </div>
             <div>
               <p>{mockUser.name}</p>
-              <p>Class: Earth-chan tamer</p>
+              <p>Class: Anime-girl tamer</p>
             </div>
         </div>
       </div>
