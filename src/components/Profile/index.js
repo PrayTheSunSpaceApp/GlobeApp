@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./Profile.module.scss";
 import { ListLayout, ListHeader, List, Pagination } from "../Events/ListEvent";
-import Statistic from './Statistic';
+import Statistic from "./Statistic";
 import elon from "../shared/assets/elonava.jpg";
 
 const mockUser = {
   name: "Elon Musk",
   age: 48,
   email: "elonmusk@mail.ru",
-  avatar: "blob:https://web.telegram.org/af5ce872-e212-4210-a46a-c6c3deeaab24"
+  avatar: elon
 };
 
 const mockEventData = [
@@ -27,11 +27,11 @@ const mockEventData = [
 ];
 
 const mockStatistic = {
-    range: "Holy Emeror",
-    eventsCount: 20000,
-    donate: 1000000000,
-    friends: 1000000,
-}
+  range: "Holy Emperor",
+  eventsCount: 20000,
+  donate: 1000000000,
+  friends: 1000000
+};
 
 class Profile extends React.Component {
   constructor(props) {
@@ -43,22 +43,39 @@ class Profile extends React.Component {
         <div className={styles.leftSide}>
           <div className={styles.eventContainer}>
             <ListLayout>
-              <ListHeader title={"Your Events"}>
-              </ListHeader>
+              <ListHeader title={"Your Events"}></ListHeader>
               <List data={mockEventData} />
               <Pagination />
             </ListLayout>
           </div>
-          <Statistic data={mockStatistic}/>
+          <Statistic data={mockStatistic} />
         </div>
         <div className={styles.rightSide}>
-            <div>
-              <img src={elon} className={styles.avatar} alt="brand" />
+          <div className={styles.mainInfo}>
+            <div className={styles.avatarContainer}>
+              <img src={mockUser.avatar} className={styles.avatar} alt="brand" />
             </div>
-            <div>
-              <p>{mockUser.name}</p>
-              <p>Class: Anime-girl tamer</p>
+            <div class={styles.description}>
+              <p>
+                <span>Name: </span> {mockUser.name}
+              </p>
+              <p>
+                <span>Age: </span> {mockUser.age}
+              </p>
+              <p>
+                <span>Email: </span> {mockUser.email}
+              </p>
+              <p>
+                <span>Class: </span> Anime-girl tamer
+              </p>
             </div>
+          </div>
+          <div className={styles.additionInfo}>
+            <h1>Your legend: </h1>
+            <p>Care about Earth is my duty</p>
+            <p>Helpful links</p>
+            <p>Social links</p>
+          </div>
         </div>
       </div>
     );
