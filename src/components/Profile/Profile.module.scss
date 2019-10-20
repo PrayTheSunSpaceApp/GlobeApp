@@ -16,4 +16,15 @@
 
 .rightSide {
     flex-grow: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #222222;
+    padding: 30px;
+    margin: 20px;
+    color: mintcream;
+}
+
+.avatar {
+    width: 100px;
+    height: auto;
 }

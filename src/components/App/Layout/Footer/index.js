@@ -11,9 +11,15 @@ const Footer = () => {
                 @SPACEAPP2019
             </div>
             <div className={styles.socialContainer}>
-                <img src={facebook} className={styles.facebookImg} alt="brand"/>
-                <img src={twitter} className={styles.facebookImg} alt="brand"/>
-                <img src={github} className={styles.facebookImg} alt="brand"/>
+                <a className={styles.shareIcon} href="https://facebook.com">
+                    <img src={facebook} className={styles.facebookImg} alt="brand"/>
+                </a>
+                <a className={styles.shareIcon} href="https://twitter.com">
+                    <img src={twitter} className={styles.facebookImg} alt="brand"/>
+                </a>
+                <a className={styles.shareIcon} href="https://github.com">
+                    <img src={github} className={styles.facebookImg} alt="brand"/>
+                </a>
             </div>
         </footer>
     );
