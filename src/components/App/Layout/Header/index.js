@@ -15,8 +15,7 @@ const Header = () => {
           <div className={style.titleContainer}>
             <Link to="/" className={style.headerLink}>
               <span className={style.headerTextSpan}>
-                <span className={style.headerGreen}>Connect</span> 
-                {" "}to{" "}
+                <span className={style.headerGreen}>Connect</span> to{" "}
                 <span className={style.headerBlue}>life</span>
               </span>
               <p className={style.headerText}>Find, Discuse, Share</p>

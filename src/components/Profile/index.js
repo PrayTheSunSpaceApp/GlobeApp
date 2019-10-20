@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Profile.module.scss";
 import { ListLayout, ListHeader, List, Pagination } from "../Events/ListEvent";
 import Statistic from './Statistic';
-
+import elon from "../shared/assets/elonava.jpg";
 
 const mockUser = {
   name: "Elon Musk",
@@ -51,7 +51,15 @@ class Profile extends React.Component {
           </div>
           <Statistic data={mockStatistic}/>
         </div>
-        <div className={styles.rightSide}>Right</div>
+        <div className={styles.rightSide}>
+            <div>
+              <img src={elon} className={styles.avatar} alt="brand" />
+            </div>
+            <div>
+              <p>{mockUser.name}</p>
+              <p>Class: Anime-girl tamer</p>
+            </div>
+        </div>
       </div>
     );
   }
