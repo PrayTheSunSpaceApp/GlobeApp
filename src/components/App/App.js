@@ -8,8 +8,6 @@ import SignIn from '../SignIn';
 import Events from '../Events';
 import Event from '../Event';
 import Home from '../Home';
-import NotFound from '../NotFound';
-import Profile from '../Profile';
 /* connect need to connect component to redux store */
 
 /* Create Statelfull component */
@@ -26,10 +24,10 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/events" component={Events} />
             <Route exact path="/event/:id" component={Event} />
-            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/profile" render={() => "Profile"} />
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/signup" render={() => "Sign up"} />
-            <Route path="**" component={NotFound} />
+            <Route path="**" render={() => "404 NotFound"} />
           </Switch>
       </Layout>
       </Router>

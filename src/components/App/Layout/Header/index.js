@@ -6,21 +6,17 @@ const Header = () => {
   return (
     <header className={style.container}>
       <div className={style.brandContainer}>
-        <Link to="/" className={style.headerLink}>
-          <div className={style.logoContainer}>
-            <img src={logo} className={style.headerImg} alt="brand" />
-          </div>
-        </Link>
+        <div className={style.logoContainer}>
+          <img src={logo} className={style.headerImg} alt="brand" />
+        </div>
         <div class={style.mainHeader}>
           <div className={style.titleContainer}>
-            <Link to="/" className={style.headerLink}>
-              <span className={style.headerTextSpan}>
-                <span className={style.headerGreen}>Connect</span> 
-                {" "}to{" "}
-                <span className={style.headerBlue}>life</span>
-              </span>
-              <p className={style.headerText}>Find, Discuse, Share</p>
-            </Link>
+            <span className={style.headerTextSpan}>
+              <span className={style.headerGreen}>Connect</span> 
+              {" "}to{" "}
+              <span className={style.headerBlue}>life</span>
+            </span>
+            <p className={style.headerText}>Find, Discuse, Share</p>
           </div>
           <div className={style.headerNavGroup}>
             <Link to="/events" className={style.headerNav}>
@@ -29,7 +25,7 @@ const Header = () => {
             <Link to="/events" className={style.headerNav}>
               Near
             </Link>
-            <Link to="/signin" className={style.headerLogin}>
+            <Link to="/events" className={style.headerLogin}>
               Profile
             </Link>
           </div>
