@@ -1,0 +1,36 @@
+@import "../shared/styles/colors.scss";
+
+.notFoundContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $black200;
+}
+
+.notFound {
+  background: whitesmoke;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px 5px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.notFound > img {
+  width: 64px;
+  height: 64px;
+}
+
+.notFound > h1 {
+  margin-left: 10px;
+  font-size: 1.8rem;
+}
+
+.green {
+  color: $green200;
+}
+
+.blue {
+  color: $blue200;
+}

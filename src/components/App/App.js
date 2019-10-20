@@ -8,6 +8,7 @@ import SignIn from '../SignIn';
 import Events from '../Events';
 import Event from '../Event';
 import Home from '../Home';
+import NotFound from '../NotFound';
 /* connect need to connect component to redux store */
 
 /* Create Statelfull component */
@@ -27,7 +28,7 @@ class App extends Component {
             <Route exact path="/profile" render={() => "Profile"} />
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/signup" render={() => "Sign up"} />
-            <Route path="**" render={() => "404 NotFound"} />
+            <Route path="**" component={NotFound} />
           </Switch>
       </Layout>
       </Router>

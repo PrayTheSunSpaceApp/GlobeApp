@@ -6,6 +6,8 @@
 .mainLayout{
     min-height: 300px;
     max-width: 1400px;
-    margin: auto;
+    margin: 20px auto;
     flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
 }
