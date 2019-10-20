@@ -1,8 +1,11 @@
 @import '../shared/styles/colors.scss';
 
 .profileContainer {
+    max-width: 1400px;
+    min-width: 300px;
     flex-grow: 1;
     display: flex;
+    justify-content: space-around;
 }
 
 .leftSide, .rightSide {
@@ -12,16 +15,17 @@
 }
 
 .leftSide {
-    flex-grow: 2;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
 
 .rightSide {
+    min-width: 400px;
     flex-grow: 1;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     background-color: #222222;
     padding: 30px;
     margin: 20px;
@@ -29,7 +33,7 @@
 }
 
 .avatar {
-    width: 100px;
+    width: 100%;
     height: auto;
 }
 
@@ -55,4 +59,42 @@
 
 .statisticContainer span {
     margin-right: 5px;
+}
+
+.avatarContainer {
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    margin: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.description {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.4rem;
+    flex-grow: 1;
+}
+
+.description span {
+    font-weight: bold;
+}
+
+.mainInfo, .additionInfo {
+    display: flex;
+}
+.additionInfo {
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.additionInfo > h1 {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.additionInfo > p {
+    font-size: 1.4rem;
 }
