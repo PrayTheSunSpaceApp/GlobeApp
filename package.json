@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier ",
+    "start": "npm run build && serve ./dist",
     "dev": "webpack-dev-server --config webpack.dev.js --mode development --open",
     "build": "webpack --config webpack.prod.js --mode production"
   },
@@ -54,7 +55,8 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "worldwind-react-globe": "^1.2.0"
+    "worldwind-react-globe": "^1.2.0",
+    "serve": "^1.12.3"
   },
   "browserslist": [
     ">0.2%",
