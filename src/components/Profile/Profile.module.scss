@@ -1,0 +1,19 @@
+@import '../shared/styles/colors.scss';
+
+.profileContainer {
+    flex-grow: 1;
+    display: flex;
+}
+
+.leftSide, .rightSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftSide {
+    flex-grow: 2;
+}
+
+.rightSide {
+    flex-grow: 1;
+}
