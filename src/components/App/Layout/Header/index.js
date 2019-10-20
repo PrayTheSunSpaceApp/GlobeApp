@@ -28,7 +28,7 @@ const Header = () => {
             <Link to="/events" className={style.headerNav}>
               Near
             </Link>
-            <Link to="/signin" className={style.headerLogin}>
+            <Link to="/profile" className={style.headerLogin}>
               Profile
             </Link>
           </div>
