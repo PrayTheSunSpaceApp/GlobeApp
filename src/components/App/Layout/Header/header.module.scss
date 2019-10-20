@@ -36,8 +36,7 @@
   margin-right: 30px;
 }
 .headerNav,
-.headerLogin,
-.headerLink {
+.headerLogin {
   padding: 10px 20px;
   transition: background-color 0.3s ease-out;
   text-decoration: none;
@@ -47,10 +46,6 @@
 
 .headerLogin {
   margin-left: auto;
-}
-
-.headerLink{
-  width: 310;
 }
 
 .headerNav:hover,
