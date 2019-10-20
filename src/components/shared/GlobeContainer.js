@@ -32,6 +32,7 @@ const createPlacemark = ({label, lt, lg, alt, markerType}) => {
         Lat ${placemark.position.latitude.toPrecision(4).toString()}, Lon ${placemark.position.longitude.toPrecision(5).toString()}
     `;
     placemark.alwaysOnTop = true;
+    console.log(placemark)
     return placemark;
 }
 
@@ -52,12 +53,30 @@ export default class ClobeContainer extends React.Component{
     }
 
     render() {
+
+
+/*        var layers = [
+            // Imagery layers.
+            {layer: new WorldWind.BMNGLayer(), enabled: true},
+            {layer: new WorldWind.BMNGLandsatLayer(), enabled: false},
+            {layer: new WorldWind.BingAerialWithLabelsLayer(null), enabled: true},
+            // Add atmosphere layer on top of all base layers.
+            {layer: new WorldWind.AtmosphereLayer(), enabled: true},
+            // WorldWindow UI layers.
+            {layer: new WorldWind.CompassLayer(), enabled: true},
+            {layer: new WorldWind.CoordinatesDisplayLayer(wwd), enabled: true},
+            {layer: new WorldWind.ViewControlsLayer(wwd), enabled: true}
+        ];*/
+
+
+
         const customLayer = createLayer()
         this.state.marksList.forEach((mark, index) => {
             customLayer.addRenderable(createPlacemark(mark))
         })
         console.log(customLayer)
         const layers = [
+            'eox-openstreetmap',
           'coordinates',
           'view-controls',
           'stars',
